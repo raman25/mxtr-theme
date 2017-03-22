@@ -5113,8 +5113,20 @@ if (typeof NProgress != 'undefined') {
 		}
 function switch_echarts1() {
 	if ($('#echart_stack_custom').length) {
+		var theme = {
+			color: [
+				'#26B99A', '#34495E', '#BDC3C7', '#3498DB',
+				'#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
+			],
 
-		var echartLine = echarts.init(document.getElementById('echart_stack_custom'), {});
+			title: {
+				itemGap: 2,
+				textStyle: {
+					fontWeight: 'normal',
+					color: '#408829'
+				}
+			}};
+		var echartLine = echarts.init(document.getElementById('echart_stack_custom'), theme);
 
 		echartLine.setOption({
 			title: {

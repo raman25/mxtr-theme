@@ -268,7 +268,7 @@ function init_timeline() {
                 'event_id': event.EventID
             }
             console.log(timelinedata[index]);
-            htmlcontent += '<a href="javascript:void(0)">  <div class="mail_list event"  id="event_id_' + event.EventID + '" >    <div class="left">    <div class="' + event.WhatType + '1 label label-primary pull-left">' + (index + 1) + '.</div>    </div>    <div class="right">    <h3>' + event.EventName + ' <small>' + formattedDate + '</small></h3><p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p> </div> </div></a>';
+            htmlcontent += '<a href="javascript:void(0)">  <div class="mail_list event"  id="event_id_' + event.EventID + '" >    <div class="left">    <div class="' + event.WhatType + '1 label label-primary pull-left">' + (index + 1) + '.</div>    </div>    <div class="right">    <h3><div class="' + event.WhatType + ' label  pull-left">&nbsp;</div> &nbsp;' + event.EventName + ' <small>' + formattedDate + '</small></h3><p>Ut enim ad minim veniam, quis nostrud exercitation enim ad minim veniam, quis nostrud exercitation...</p> </div> </div></a>';
             //'<div id="event_id_' + event.EventID + '" class="event"><h2><a href="#">' + event.EventName + '</a></h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p></div>';
         });
         document.getElementById('eventcontainer').innerHTML = htmlcontent;
