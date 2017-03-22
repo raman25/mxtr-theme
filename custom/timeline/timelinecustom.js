@@ -269,7 +269,7 @@ function init_timeline() {
             }
             var detail = '';
             if (event.WhatType == 'pageVisit'){
-                detail = "<p>"+"Visit to" + event.WhatID+"</p>";
+                detail = "<p>"+"&nbsp;Visit to " + event.WhatID+"</p>";
             }
             console.log(timelinedata[index]);
             htmlcontent += '<a href="javascript:void(0)">  <div class="mail_list event"  id="event_id_' + event.EventID + '" >    <div class="left">    <div class="' + event.WhatType + '1 label label-primary pull-left">' + (index + 1) + '.</div>    </div>    <div class="right">    <h3><div class="' + event.WhatType + ' label  pull-left">&nbsp;&nbsp;</div> &nbsp;' + event.EventName + ' <small>' + formattedDate + '</small></h3>'+detail+' </div> </div></a>';
