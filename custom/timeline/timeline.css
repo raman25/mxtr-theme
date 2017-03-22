@@ -333,7 +333,7 @@ body {
     border-left: 1px solid #e0e0e0;
 }
 .events {
-    height: 400px;
+    height: 250px;
     overflow-y:scroll;
 }
 
