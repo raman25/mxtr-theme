@@ -153,7 +153,7 @@ function init_timeline() {
                     "CreateTimestamp": "2017-03-20T17:07:03.000+0000"
                 },
                 {
-                    "EventID":0,
+                    "EventID": 0,
                     "LeadID": "59869836290",
                     "EventName": "User visited page.",
                     "WhatID": "mxtrautomation.com",
@@ -261,7 +261,7 @@ function init_timeline() {
             var mm = eventDate.getMonth() + 1;
             var yyyy = eventDate.getFullYear();
             var formattedDate = moment(event.CreateTimestamp).toNow();
-            event.EventID = event.EventID ? event.EventID : "index-"+index;
+            event.EventID = event.EventID ? event.EventID : parseInt(index + 1);
             timelinedata[index] = {
                 'start': eventDate,
                 'content': event.EventName,
