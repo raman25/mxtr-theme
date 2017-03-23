@@ -144,7 +144,7 @@ function init_timeline() {
             "IsUnsubscribed": false,
             "Events": [
                 {
-                    "EventID": "221209145346",
+                    "EventID": 0,
                     "LeadID": "59869836290",
                     "EventName": "Filled out the form Get Started ",
                     "WhatID": "1a15ed25-b327-46d2-b9fa-a50fa89841a6",
@@ -153,7 +153,7 @@ function init_timeline() {
                     "CreateTimestamp": "2017-03-20T17:07:03.000+0000"
                 },
                 {
-                    "EventID": "221209144322",
+                    "EventID":0,
                     "LeadID": "59869836290",
                     "EventName": "User visited page.",
                     "WhatID": "mxtrautomation.com",
@@ -261,6 +261,7 @@ function init_timeline() {
             var mm = eventDate.getMonth() + 1;
             var yyyy = eventDate.getFullYear();
             var formattedDate = moment(event.CreateTimestamp).toNow();
+            event.EventID = event.EventID ? event.EventID : "index-"+index;
             timelinedata[index] = {
                 'start': eventDate,
                 'content': event.EventName,
