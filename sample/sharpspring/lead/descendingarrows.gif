@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oooops...</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="icon" type="image/png" href="/includes/img/favicon-128.png" />
+
+    <link rel="stylesheet" href="/includes/css/bootstrap.css">
+
+    <link href="/includes/css/auth.css?ver=1.0" rel="stylesheet" type="text/css">
+
+    <!-- JS CORE -->
+    <script type="text/javascript" src="/includes/js/dist/core.min.js?ver=5.75-7"></script>
+    <script type="text/javascript" src="/includes/js/dist/plugin.min.js?ver=5.75-7"></script>
+    <script type="text/javascript" src="/includes/js/core/require.js?ver=5.75-7"></script>
+    <script type="text/javascript" src="/includes/js/app/underscore.js?ver=5.7504c24e5"></script>
+
+    <!-- LANGUAGE -->
+    <script type="text/javascript" src="/includes/js/app/lang/en_US.js?ver=5.7504c24e5"></script>
+    <script type="text/javascript" src="/includes/js/app/lang/locales.js?ver=5.7504c24e5"></script>
+</head>
+
+<body class="auth-page">
+
+
+<div id="login_page_content">
+
+    <h1 id="login_logo"><span class="hide">SharpSpring</span></h1>
+    <div id="login-form">
+        <h1><i class="icon-frown icon-3x"></i></h1>
+        <h2>404 Page Not Found</h2>
+        <div class="center"><p>The page you requested was not found.</p></div>
+    </div>
+
+</div>
+
+<div id="login-footer">
+    <ul>
+        <li><a href="http://sharpspring.com/legal/terms" target="_blank">Terms of Service</a></li>
+        <li><a href="http://sharpspring.com/legal/privacy" target="_blank">Privacy Policy</a></li>
+    </ul>
+
+    <p>Copyright &copy; 2012 - 2017</p>
+</div>
+
+<script>
+</script>
+</body>
+</html>
