@@ -5938,9 +5938,9 @@ links.Timeline.ClusterGenerator.prototype.getClusters = function (scale, maxItem
                         }else if(classNames.indexOf('pageVisit') > -1) {
                             clusterClassName = 'pageVisit';
                             selectedItemIndex = classNames.indexOf('pageVisit');
-                        }else if(classNames.indexOf('green') > -1) {
-                            clusterClassName = 'green';
-                            selectedItemIndex = classNames.indexOf('green');
+                        }else if(classNames.indexOf('email') > -1) {
+                            clusterClassName = 'email';
+                            selectedItemIndex = classNames.indexOf('email');
                         }
                       
                         var eventId = clusterItems[selectedItemIndex].event_id;
