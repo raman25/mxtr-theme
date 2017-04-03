@@ -84,13 +84,13 @@ body {
 }
 
 .timeline-event-dot {
-    background: url('img/error.svg') no-repeat;
+    background: url('img/new/001-error.svg') no-repeat;
     width: 30px !important;
     height: 30px !important;
     top: 66px !important;
 }
 .timeline-event-dot.hovered,.timeline-event-dot.selected,.timeline-event-dot:hover {
-    background: url('img/error-hover.svg') no-repeat !important;
+    background: url('img/new/001-error-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 
@@ -346,29 +346,29 @@ body {
 }
 
 .timeline-event-dot.form , .timeline-container #eventcontainer .form{
-    background: url('img/forms.svg') no-repeat;
+    background: url('img/new/003-forms.svg') no-repeat;
 }
 .timeline-event-dot.form.hovered,.timeline-event-dot.form.selected,.timeline-event-dot.form:hover ,
 .timeline-container #eventcontainer .event.hovered .form, .timeline-container #eventcontainer .event.selected .form, .timeline-container #eventcontainer .event:hover .form{
-    background: url('img/forms-hover.svg') no-repeat !important;
+    background: url('img/new/003-forms-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 
 .timeline-event-dot.pageVisit , .timeline-container #eventcontainer .pageVisit {
-    background: url('img/internet.svg') no-repeat;
+    background: url('img/new/004-worldwide.svg') no-repeat;
 }
 .timeline-event-dot.pageVisit.hovered, .timeline-event-dot.pageVisit.selected, .timeline-event-dot.pageVisit:hover ,
 .timeline-container #eventcontainer .event.hovered .pageVisit, .timeline-container #eventcontainer .event.selected .pageVisit, .timeline-container #eventcontainer .event:hover .pageVisit{
-    background: url('img/internet-hover.svg') no-repeat !important;
+    background: url('img/new/004-worldwide-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 
 .timeline-event-dot.email , .timeline-container #eventcontainer .email{
-    background: url('img/envelope.svg') no-repeat;
+    background: url('img/new/002-interface.svg') no-repeat;
 }
 .timeline-event-dot.email.hovered, .timeline-event-dot.email.selected, .timeline-event-dot.email:hover ,
 .timeline-container #eventcontainer .event.hovered .email, .timeline-container #eventcontainer .event.selected .email, .timeline-container #eventcontainer .event:hover .email{
-    background: url('img/envelope-hover.svg') no-repeat !important;
+    background: url('img/new/002-interface-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 .timeline-container  #eventcontainer {
@@ -402,4 +402,15 @@ div#eventcontainer::-webkit-scrollbar-thumb
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
+}
+.timeline-event-dot.label.pull-left{
+    width: 15px !important
+}
+.timeline-event-dot.opportunity , .timeline-container #eventcontainer .opportunity{
+    background: url('img/new/opportunity.svg') no-repeat;
+}
+.timeline-event-dot.opportunity.hovered, .timeline-event-dot.opportunity.selected, .timeline-event-dot.opportunity:hover ,
+.timeline-container #eventcontainer .event.hovered .opportunity, .timeline-container #eventcontainer .event.selected .opportunity, .timeline-container #eventcontainer .event:hover .opportunity{
+    background: url('img/new/opportunity-hover.svg') no-repeat !important;
+    cursor: pointer;
 }

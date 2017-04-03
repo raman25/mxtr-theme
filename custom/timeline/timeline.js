@@ -5941,6 +5941,9 @@ links.Timeline.ClusterGenerator.prototype.getClusters = function (scale, maxItem
                         }else if(classNames.indexOf('email') > -1) {
                             clusterClassName = 'email';
                             selectedItemIndex = classNames.indexOf('email');
+                        }else if(classNames.indexOf('opportunity') > -1) {
+                            clusterClassName = 'opportunity';
+                            selectedItemIndex = classNames.indexOf('opportunity');
                         }
                       
                         var eventId = clusterItems[selectedItemIndex].event_id;
@@ -6530,9 +6533,11 @@ links.Timeline.StepDate.prototype.getLabelMinor = function(options, date) {
         case links.Timeline.StepDate.SCALE.MILLISECOND:  return String(date.getMilliseconds());
         case links.Timeline.StepDate.SCALE.SECOND:       return String(date.getSeconds());
         case links.Timeline.StepDate.SCALE.MINUTE:
-            return this.addZeros(date.getHours(), 2) + ":" + this.addZeros(date.getMinutes(), 2);
+            //return  this.addZeros(date.getHours(), 2) + ":" + this.addZeros(date.getMinutes(), 2);
+           return moment(date).format('h:mm a');
         case links.Timeline.StepDate.SCALE.HOUR:
-            return this.addZeros(date.getHours(), 2) + ":" + this.addZeros(date.getMinutes(), 2);
+            //return this.addZeros(date.getHours(), 2) + ":" + this.addZeros(date.getMinutes(), 2);
+            return moment(date).format('h:mm a');
         case links.Timeline.StepDate.SCALE.WEEKDAY:      return options.DAYS_SHORT[date.getDay()] + ' ' + date.getDate();
         case links.Timeline.StepDate.SCALE.DAY:          return String(date.getDate());
         case links.Timeline.StepDate.SCALE.MONTH:        return options.MONTHS_SHORT[date.getMonth()];   // month is zero based
@@ -6556,14 +6561,17 @@ links.Timeline.StepDate.prototype.getLabelMajor = function(options, date) {
 
     switch (this.scale) {
         case links.Timeline.StepDate.SCALE.MILLISECOND:
-            return  this.addZeros(date.getHours(), 2) + ":" +
-                this.addZeros(date.getMinutes(), 2) + ":" +
-                this.addZeros(date.getSeconds(), 2);
+            //return  this.addZeros(date.getHours(), 2) + ":" +
+            //    this.addZeros(date.getMinutes(), 2) + ":" +
+            //    this.addZeros(date.getSeconds(), 2);
+            return  moment(date).format('h:mm:ss a');
         case links.Timeline.StepDate.SCALE.SECOND:
+            //return  date.getDate() + " " +
+            //    options.MONTHS[date.getMonth()] + " " +
+            //    this.addZeros(date.getHours(), 2) + ":" +
+            //    this.addZeros(date.getMinutes(), 2);
             return  date.getDate() + " " +
-                options.MONTHS[date.getMonth()] + " " +
-                this.addZeros(date.getHours(), 2) + ":" +
-                this.addZeros(date.getMinutes(), 2);
+                options.MONTHS[date.getMonth()] + " " +  moment(date).format('h:mm a');
         case links.Timeline.StepDate.SCALE.MINUTE:
             return  options.DAYS[date.getDay()] + " " +
                 date.getDate() + " " +
