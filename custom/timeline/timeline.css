@@ -1,10 +1,3 @@
-body {
-    font-size: 10pt;
-    font-family: arial, sans-serif;
-    color: #4d4d4d;
-    background: #fff;
-}
-
 .timeline-frame {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,9 +17,9 @@ body {
 
 .timeline-axis {
     -moz-box-sizing: border-box;
-    border-color: #e0e0e0;
-    border-top-style: solid;
-    border-width: 1px;
+    border-color: #e0e0e0 !important;
+    border-top-style: solid !important;
+    border-width: 1px !important;
     box-sizing: border-box;
     background: #fff;
 }
@@ -193,7 +186,7 @@ body {
 
 .timeline-container {
     position: relative;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .timeline-controls-container {
@@ -202,7 +195,7 @@ body {
     height: 125px;
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 10px;
     border-left: 1px solid #e0e0e0;
 }
 
@@ -213,8 +206,8 @@ body {
     position: absolute;
     /*top: 40px;
     right: 0px;*/
-    top: 28px;
-    right: 11px;
+    top: 16px;
+    right: 6px;
 }
 
 .timeline-button {
@@ -346,32 +339,35 @@ body {
 }
 
 .timeline-event-dot.form , .timeline-container #eventcontainer .form{
-    background: url('img/new/003-forms.svg') no-repeat;
+    background: url('img/icons/form.svg') no-repeat;
 }
 .timeline-event-dot.form.hovered,.timeline-event-dot.form.selected,.timeline-event-dot.form:hover ,
 .timeline-container #eventcontainer .event.hovered .form, .timeline-container #eventcontainer .event.selected .form, .timeline-container #eventcontainer .event:hover .form{
-    background: url('img/new/003-forms-hover.svg') no-repeat !important;
+    background: url('img/icons/form-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 
 .timeline-event-dot.pageVisit , .timeline-container #eventcontainer .pageVisit {
-    background: url('img/new/004-worldwide.svg') no-repeat;
+    background: url('img/icons/globe.svg') no-repeat;
 }
 .timeline-event-dot.pageVisit.hovered, .timeline-event-dot.pageVisit.selected, .timeline-event-dot.pageVisit:hover ,
 .timeline-container #eventcontainer .event.hovered .pageVisit, .timeline-container #eventcontainer .event.selected .pageVisit, .timeline-container #eventcontainer .event:hover .pageVisit{
-    background: url('img/new/004-worldwide-hover.svg') no-repeat !important;
+    background: url('img/icons/globe-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 
 .timeline-event-dot.email , .timeline-container #eventcontainer .email{
-    background: url('img/new/002-interface.svg') no-repeat;
+    background: url('img/icons/mail.svg') no-repeat;
 }
 .timeline-event-dot.email.hovered, .timeline-event-dot.email.selected, .timeline-event-dot.email:hover ,
 .timeline-container #eventcontainer .event.hovered .email, .timeline-container #eventcontainer .event.selected .email, .timeline-container #eventcontainer .event:hover .email{
-    background: url('img/new/002-interface-hover.svg') no-repeat !important;
+    background: url('img/icons/mail-hover.svg') no-repeat !important;
     cursor: pointer;
 }
 .timeline-container  #eventcontainer {
+    background: #ffffff none repeat scroll 0 0;
+    border-left: 5px solid;
+    border-top: 1px solid #dbdbdb;
     padding: 10px;
 }
 .timeline-container  #eventcontainer .label-primary {
@@ -403,14 +399,60 @@ div#eventcontainer::-webkit-scrollbar-thumb
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
 }
+
+.x_content.no-scrll {
+    overflow-y: unset;
+}
+/*filter css*/
+
+.toggle-link.link-active .icon-ok, .toggle-link.link-active .icon-alarm, .toggle-link.link-active .icon-star, .toggle-link.checked .icon-ok, .toggle-link.checked .icon-alarm, .toggle-link.checked .icon-star {
+    color: rgb(132, 195, 64);
+    display: inline;
+}
+
+.dropdown-menu > li > a, .dropdown-menu > .menu-group > li > a {
+    color: rgb(15, 80, 95);
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    white-space: nowrap;
+    padding: 10px 10px;
+}
+
+.toggle-link .checkbox {
+    background: rgb(255, 255, 255) none repeat scroll 0 0;
+    border: 2px solid rgb(218, 222, 222);
+    border-radius: 3px;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: normal;
+    margin: 0 7px 0 0px;
+    padding: 0 2px 0 3px;
+    position: relative;
+    text-align: center;
+    width: 20px;
+}
+
+.toggle-link.link-active .checkbox, .toggle-link.checked .checkbox {
+    border-color: rgb(132, 195, 64);
+}
+
+
+.toggle-link .checkbox i {
+    color: #84c340;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
 .timeline-event-dot.label.pull-left{
     width: 15px !important
 }
 .timeline-event-dot.opportunity , .timeline-container #eventcontainer .opportunity{
-    background: url('img/new/opportunity.svg') no-repeat;
+    background: url('img/icons/oppertunity.svg') no-repeat;
 }
 .timeline-event-dot.opportunity.hovered, .timeline-event-dot.opportunity.selected, .timeline-event-dot.opportunity:hover ,
 .timeline-container #eventcontainer .event.hovered .opportunity, .timeline-container #eventcontainer .event.selected .opportunity, .timeline-container #eventcontainer .event:hover .opportunity{
-    background: url('img/new/opportunity-hover.svg') no-repeat !important;
+    background: url('img/icons/opportunity-hover.svg') no-repeat !important;
     cursor: pointer;
 }

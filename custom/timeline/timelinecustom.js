@@ -84,8 +84,6 @@ function itemToEventMapCallback(eventId, dotDiv, eventIds) {
     console.log("eventToItemMapping : ", eventToItemMapping);
 }
 function itemArialLabelCallback(divDot, className, eventDate, content) {
-    //var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    //monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var eventType = (className == 'green') ? "Ok" :
         (
             (className == 'green-m') ? "Maintenance" :
