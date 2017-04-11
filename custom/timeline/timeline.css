@@ -326,21 +326,22 @@
     border-left: 1px solid #e0e0e0;
 }
 .events {
-    height: 300px;
+    min-height: 400px;
     overflow-y:scroll;
+	border: 0 none;
+	max-height: 400px;
 }
 
 .event{
     background-color: inherit;
 }
 
-.event:hover,.event.highlighted{
-    background-color: #f2f5f7;
-}
+
 
 .timeline-event-dot.form , .timeline-container #eventcontainer .form{
     background: url('img/icons/form.svg') no-repeat;
 }
+.highlighted .form,
 .timeline-event-dot.form.hovered,.timeline-event-dot.form.selected,.timeline-event-dot.form:hover ,
 .timeline-container #eventcontainer .event.hovered .form, .timeline-container #eventcontainer .event.selected .form, .timeline-container #eventcontainer .event:hover .form{
     background: url('img/icons/form-hover.svg') no-repeat !important;
@@ -350,6 +351,7 @@
 .timeline-event-dot.pageVisit , .timeline-container #eventcontainer .pageVisit {
     background: url('img/icons/globe.svg') no-repeat;
 }
+.highlighted .pageVisit,
 .timeline-event-dot.pageVisit.hovered, .timeline-event-dot.pageVisit.selected, .timeline-event-dot.pageVisit:hover ,
 .timeline-container #eventcontainer .event.hovered .pageVisit, .timeline-container #eventcontainer .event.selected .pageVisit, .timeline-container #eventcontainer .event:hover .pageVisit{
     background: url('img/icons/globe-hover.svg') no-repeat !important;
@@ -359,6 +361,7 @@
 .timeline-event-dot.email , .timeline-container #eventcontainer .email{
     background: url('img/icons/mail.svg') no-repeat;
 }
+.highlighted .email,
 .timeline-event-dot.email.hovered, .timeline-event-dot.email.selected, .timeline-event-dot.email:hover ,
 .timeline-container #eventcontainer .event.hovered .email, .timeline-container #eventcontainer .event.selected .email, .timeline-container #eventcontainer .event:hover .email{
     background: url('img/icons/mail-hover.svg') no-repeat !important;
@@ -366,9 +369,8 @@
 }
 .timeline-container  #eventcontainer {
     background: #ffffff none repeat scroll 0 0;
-    border-left: 5px solid;
-    border-top: 1px solid #dbdbdb;
-    padding: 10px;
+    padding: 0 10px;
+	position: relative;
 }
 .timeline-container  #eventcontainer .label-primary {
     background-color: black;
@@ -445,14 +447,102 @@ div#eventcontainer::-webkit-scrollbar-thumb
     vertical-align: middle;
 }
 
-.timeline-event-dot.label.pull-left{
-    width: 15px !important
+.timeline-container .label.pull-left{
+    width: auto;
 }
 .timeline-event-dot.opportunity , .timeline-container #eventcontainer .opportunity{
     background: url('img/icons/oppertunity.svg') no-repeat;
 }
-.timeline-event-dot.opportunity.hovered, .timeline-event-dot.opportunity.selected, .timeline-event-dot.opportunity:hover ,
+.highlighted .opportunity, .timeline-event-dot.opportunity.hovered, .timeline-event-dot.opportunity.selected, .timeline-event-dot.opportunity:hover ,
 .timeline-container #eventcontainer .event.hovered .opportunity, .timeline-container #eventcontainer .event.selected .opportunity, .timeline-container #eventcontainer .event:hover .opportunity{
     background: url('img/icons/opportunity-hover.svg') no-repeat !important;
     cursor: pointer;
+}
+
+.timeline-container .mail_list{
+	border-bottom: 0 none;
+	margin: 0;
+}
+.timeline-container .events a {
+    display: inline-block;
+    width: 100%;
+	padding-bottom: 30px;
+	position: relative;
+}
+.timeline-container #eventcontainer a:before {
+    position: absolute;
+    content: " ";
+    border-left: 1px solid #ccc;
+    height: 38px;
+    width: 1px;
+    left: 29px;
+    z-index: 1;
+    top: 42px;
+}
+.timeline-container #eventcontainer a:last-child::before{
+	border-left: 0 none;
+}
+.timeline-container .events a span{
+	font-size: 16px;
+}
+
+.mail_list .left {
+    display: inline-block;
+    float: none;
+    min-height: 50px;
+    vertical-align: middle;
+    width: auto;
+	min-width: 60px;
+	padding: 0 10px;
+	margin: 0;
+}
+.mail_list .right {
+    display: inline-block;
+    float: none;
+    min-height: 50px;
+    vertical-align: middle;
+    margin: 0;
+	width: 90%;
+	padding: 15px 30px;
+	background-color: #f2f2f2;
+	margin: 0 0 0 2%;
+	position: relative;
+}
+.mail_list .right::after{
+	bottom: 5px;
+    content: "";
+    height: 20px;
+    left: -48px;
+    position: absolute;
+    width: 10px;
+	border-right: 40px solid #f2f2f2;
+	border-left: 8px solid transparent;
+	border-top: 3px solid transparent;
+	border-bottom: 18px solid transparent;
+}
+
+.timeline-container #eventcontainer .label{
+	height: 40px !important;
+    width: 100% !important;
+	padding: 0;
+}
+.timeline-container .right > span {
+    display: inline-block;
+    width: 45%;
+}
+.right .visitTo {
+	color: #1fbb9d;
+    text-align: center;
+}
+.event:hover .right, .highlighted.event .right {
+    background-color: #e3efd9;
+}
+.mail_list:hover .right::after, 
+.highlighted.event .right:after {
+	border-right: 40px solid #e3efd9;
+}
+.events {
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
 }
