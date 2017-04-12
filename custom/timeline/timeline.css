@@ -468,12 +468,13 @@ div#eventcontainer::-webkit-scrollbar-thumb
     width: 100%;
 	padding-bottom: 30px;
 	position: relative;
+	z-index: 2;
 }
 .timeline-container #eventcontainer .timeline-detail:before {
     position: absolute;
     content: " ";
     border-left: 1px solid #ccc;
-    height: 38px;
+    height: 100%;
     width: 1px;
     left: 29px;
     z-index: 1;
@@ -494,6 +495,7 @@ div#eventcontainer::-webkit-scrollbar-thumb
 	min-width: 60px;
 	padding: 0 10px;
 	margin: 0;
+	background-color: #fff;
 }
 .mail_list .right {
     float: left;
@@ -510,7 +512,7 @@ div#eventcontainer::-webkit-scrollbar-thumb
 	bottom: 5px;
     content: "";
     height: 20px;
-    left: -48px;
+    left: -50px;
     position: absolute;
     width: 10px;
 	border-right: 40px solid #f2f2f2;
@@ -534,6 +536,11 @@ div#eventcontainer::-webkit-scrollbar-thumb
 
 .right .visitTo a {	
 	color: #1fbb9d;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 160px;
 }
 .event:hover .right, .highlighted.event .right {
     background-color: #e3efd9;
@@ -547,7 +554,11 @@ div#eventcontainer::-webkit-scrollbar-thumb
     margin-top: 40px;
     width: 100%;
 }
-
+.timeline-event-box {
+    bottom: -125px !important;
+    text-align: center;
+    top: auto !important;
+}
 
 @media (max-width: 1260px) { 
 	.mail_list .right{
