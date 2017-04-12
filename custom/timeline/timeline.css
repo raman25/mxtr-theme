@@ -487,8 +487,7 @@ div#eventcontainer::-webkit-scrollbar-thumb
 }
 
 .mail_list .left {
-    display: inline-block;
-    float: none;
+    float: left;
     min-height: 50px;
     vertical-align: middle;
     width: auto;
@@ -497,15 +496,14 @@ div#eventcontainer::-webkit-scrollbar-thumb
 	margin: 0;
 }
 .mail_list .right {
-    display: inline-block;
-    float: none;
+    float: left;
     min-height: 50px;
     vertical-align: middle;
     margin: 0;
-	width: 90%;
+	width: 91%;
 	padding: 15px 30px;
 	background-color: #f2f2f2;
-	margin: 0 0 0 2%;
+	margin: 0 0 0 2.1%;
 	position: relative;
 }
 .mail_list .right::after{
@@ -545,4 +543,47 @@ div#eventcontainer::-webkit-scrollbar-thumb
     display: inline-block;
     margin-top: 40px;
     width: 100%;
+}
+
+
+@media (max-width: 1260px) { 
+	.mail_list .right{
+		width: 88%;
+		float: right;
+	}
+	.mail_list .left{
+		padding-left: 0;
+	}
+	.timeline-container #eventcontainer a:before{
+		left: 19px;
+	}
+	.timeline-container .right > span{
+		width: 55%;
+	}
+	.timeline-container .right > span.visitTo{
+		width: 44%;
+	}
+	.timeline-container .events a span {
+		font-size: 14px;
+	}
+}
+@media (max-width: 767px) { 
+	.timeline-container .right > span, .timeline-container .right > span.visitTo {
+		width: 100%;
+		text-align: center;
+	}
+	.timeline-container .right > span.visitTo{
+		margin-top: 5px;
+	}
+	
+	.mail_list .right::after{
+		bottom: auto;
+		top: 5px;
+	}
+	.timeline-container #eventcontainer a:before{
+		height: 100%;
+	}
+	.mail_list .right{
+		width: 80%;
+	}
 }
