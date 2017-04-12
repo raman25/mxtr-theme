@@ -279,13 +279,13 @@ function init_timeline() {
             var detail = '';
             var eventType = event.WhatType;
             if (eventType == 'pageVisit') {
-                detail = "<span class='visitTo'>" + "Visit to " + event.WhatID + "</span>";
+                detail = '<span class="visitTo"><a href="http://' + event.WhatID + '">'+event.WhatID+'</a></span>';
             }
             if (!eventType || (eventType != 'pageVisit' && eventType != 'form' && eventType != 'email')) {
                 eventType = eventType ?  "timeline-event-dot "+ eventType : "timeline-event-dot";
             }
             console.log(timelinedata[index]);
-            htmlcontent += '<a href="javascript:void(0)">  <div class="mail_list event"  id="event_id_' + event.EventID + '" >    <div class="left">    <div class="' + eventType + ' label pull-left">&nbsp;&nbsp;</div>    </div>    <div class="right">    <span>' + event.EventName + ' <small>' + formattedDate + '</small></span>' + detail + ' </div> </div></a>';
+            htmlcontent += '<div href="javascript:void(0)" class="timeline-detail">  <div class="mail_list event"  id="event_id_' + event.EventID + '" >    <div class="left">    <div class="' + eventType + ' label pull-left">&nbsp;&nbsp;</div>    </div>    <div class="right">    <span>' + event.EventName + ' <small>' + formattedDate + '</small></span>' + detail + ' </div> </div></div>';
             //'<div id="event_id_' + event.EventID + '" class="event"><span><a href="#">' + event.EventName + '</a></span><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</p></div>';
         });
         document.getElementById('eventcontainer').innerHTML = htmlcontent;
