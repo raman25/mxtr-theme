@@ -512,7 +512,7 @@ div#eventcontainer::-webkit-scrollbar-thumb
 	bottom: 5px;
     content: "";
     height: 20px;
-    left: -50px;
+    left: -46px;
     position: absolute;
     width: 10px;
 	border-right: 40px solid #f2f2f2;
