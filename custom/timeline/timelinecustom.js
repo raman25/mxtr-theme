@@ -279,7 +279,7 @@ function init_timeline() {
             var detail = '';
             var eventType = event.WhatType;
             if (eventType == 'pageVisit') {
-                detail = '<span class="visitTo"><a href="http://' + event.WhatID + '">'+event.WhatID+'</a></span>';
+                detail = '<span class="visitTo"><a target="_blank" href="http://' + event.WhatID + '">'+event.WhatID+'</a></span>';
             }
             if (!eventType || (eventType != 'pageVisit' && eventType != 'form' && eventType != 'email')) {
                 eventType = eventType ?  "timeline-event-dot "+ eventType : "timeline-event-dot";

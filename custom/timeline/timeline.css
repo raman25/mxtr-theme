@@ -541,6 +541,7 @@ div#eventcontainer::-webkit-scrollbar-thumb
     overflow: hidden;
     display: inline-block;
     width: 160px;
+    cursor: pointer;
 }
 .event:hover .right, .highlighted.event .right {
     background-color: #e3efd9;
