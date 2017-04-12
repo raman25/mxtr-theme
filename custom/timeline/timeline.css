@@ -534,6 +534,7 @@ div#eventcontainer::-webkit-scrollbar-thumb
 
 .right .visitTo a {	
 	color: #1fbb9d;
+    cursor: pointer;
 }
 .event:hover .right, .highlighted.event .right {
     background-color: #e3efd9;
